@@ -56,11 +56,13 @@ sbatch convert.sh
 
 Notable variables in convert.sh include: 
 
-| Variable       | Meaning |
-|----------------|---------|
-| `cpus-per-task` | The number of CPUs must be a multiple of 4 to account for Docling's default usage of 4 CPUs to process each PDF file. |
-| `array` | The number of tasks to divide the workload amongst. Example: `array=0-3` will divide the files among 4 different tasks. |
-
+| Variable       | Meaning                                                                                                                 |
+|----------------|-------------------------------------------------------------------------------------------------------------------------|
+| `cpus-per-task` | The number of CPUs must be a multiple of 4 to account for Docling's default usage of 4 CPUs to process each PDF file.   |
+| `array`        | The number of tasks to divide the workload amongst. Example: `array=0-3` will divide the files among 4 different tasks. |
+| `BASE_DIR`     | The path to the directory containing the PDFs to convert.                                                               |
+| `input_root`   | Same path as the BASE_DIR.                                                                                              |
+| `output_root`  | The path to the output directory. (Where all the converted Markdown files will be stored. |
 Adjust these variables according to user needs. 
 
 * EX. When working with a larger number of PDF files it may be beneficial

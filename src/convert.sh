@@ -35,5 +35,5 @@ done
 python3 convert_to_md.py \
   -f "${assigned_files[@]}" \
   -np $((SLURM_CPUS_PER_TASK / 4)) \
-  --input_root /mnt/testenv/requisitions/Xifin_Data_Extractor/pdf \
+  --input_root BASE_DIR \
   --output_root /mnt/testenv/requisitions/Xifin_Data_Extractor/md
